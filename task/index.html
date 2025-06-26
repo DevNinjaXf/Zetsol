@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exp calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="welcome">WELCOME</h1>
+    <div id="name-section">
+      <input type="text" id="username" placeholder="Enter your Name" autocomplete="off" />
+      <button onclick="setname()"> proceed </button>
+    </div>
+
+    <div id="tracker" style="display:none;">
+      <form id="expense-form">
+        <input type="text" id="title" placeholder="title [e.g (salary, rent, grocery e.t.c)]" required autocomplete="off" />
+        <input type="number" id="amount" placeholder="Amount (+ for income, - for expense)" required autocomplete="off" />
+        <button type="submit">ADD / sub</button>
+      </form>
+
+      <p id="error-msg" style="display: none; color: red; text-align: center;"></p>
+
+      <div class="summary">
+        <p>Total Balance: PKR <span id="total">0</span></p>
+        <p style="color: rgb(55, 189, 251);">Total Income: PKR <span id="total-income">0</span></p>
+        <p style="color: red;">Total Expense: PKR <span id="total-expense">0</span></p>
+      </div>
+
+      <ul id="expense-list" class="expense-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
