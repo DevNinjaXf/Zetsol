@@ -161,7 +161,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-/* Responsive for small devices  */
+
  @media (max-width: 320px) {
   body {
     padding: 10px;
