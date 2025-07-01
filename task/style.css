@@ -120,8 +120,8 @@ form button:hover {
   background: rgb(154, 131, 181);
   margin-bottom: 15px;
   padding: 15px 20px;
-  border-left: 10px solid;
-  border-right: 10px solid;
+  border-left: 10px solid rgb(188, 89, 226);
+  border-right: 10px solid rgb(188, 89, 226);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -131,9 +131,9 @@ form button:hover {
 
 .delete-btn {
   background: none;
-  border: 1px solid rgb(55, 189, 251);
-  border-radius: 200px;
-  color: rgb(55, 189, 251);
+  border: 1px solid black;
+  border: none;
+  color: white;
   font-size: 16px;
   margin-left: 10px;
   cursor: pointer;
@@ -142,10 +142,11 @@ form button:hover {
 .delete-btn:hover {
   color: red;
   border: solid red;
+  border: none;
 }
 
 .income {
-  color: rgb(55, 189, 251);
+  color: white;
 }
 
 .expense {
@@ -162,7 +163,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-/* Responsive for small devices  */
+
  @media (max-width: 320px) {
   body {
     padding: 10px;
