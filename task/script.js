@@ -21,13 +21,20 @@ let expense = 0;
 
 
 function setname() {
-    const name = usernameInput.value.trim();
-    if (name !== "") {
-        welcomeTitle.textContent = `Welcome, ${name}`;
-        nameSection.style.display = "none";
-        trackerSection.style.display = "block";
-    }
+  const name = usernameInput.value.trim();
+  if (name !== "") {
+    welcomeTitle.textContent = `Welcome, ${name}`;
+    nameSection.style.display = "none";
+
+
+    trackerSection.style.display = "block";
+    void trackerSection.offsetWidth; 
+
+    
+    trackerSection.classList.add("slide-in");
+  }
 }
+
 
 
 
@@ -120,7 +127,7 @@ function updateTracker() {
     expenses.forEach(item => {
         const li = document.createElement("li");
         li.classList.add(item.amount >= 0 ? "income" : "expense");
-        li.classList.add("pop-in"); // animation class
+        li.classList.add("pop-in");  
         li.setAttribute("data-id", item.id); 
         li.innerHTML = `
             <span>${item.title}</span>
